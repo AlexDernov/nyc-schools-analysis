@@ -73,11 +73,11 @@ This environment contains all packages for **data extraction, filtering, merging
 
 - **Results:**
 
-    - Brooklyn: highest number of schools (121), followed by Bronx and Manhattan
-    - All Brooklyn schools accept 9th grade, showing broad coverage from the typical high school entry point.
-    - Average starting grades vary: - Brooklyn: 8.43 → some schools integrate middle school (grades 6–8) - Queens: 8.39 - Staten Island: 9.00 → pure high schools
-    - Student count per school varies significantly across boroughs: - Staten Island has few, but large schools - Brooklyn and Manhattan have many, moderately sized schools
-    - Grade structures are consistent, almost all schools reach grade 12.
+    - **Brooklyn:** highest **number of schools (121)**, followed by Bronx and Manhattan
+    - All **Brooklyn schools accept 9th grade**, showing broad coverage from the typical high school entry point.
+    - Average starting grades vary: - **Brooklyn: 8.43 → some schools integrate middle school** (grades 6–8) - Queens: 8.39 - **Staten Island: 9.00 → pure high schools**
+    - Student count per school varies significantly across boroughs: - **Staten Island has few, but large schools** - **Brooklyn** and **Manhattan** have **many, moderately sized schools**
+    - Grade structures are consistent, **almost all schools reach grade 12**.
   
 - **Visualizations:**
 
@@ -105,18 +105,18 @@ This environment contains all packages for **data extraction, filtering, merging
 
     1.School Distribution
 
-        - Brooklyn has the highest number of high schools
-        - Staten Island has very few, but typically larger schools
+        - **Brooklyn** has the **highest number of high schools**
+        - **Staten Island** has **very few, but typically larger schools**
   
     2.Data Completeness Issues
 
-        - ELL and SPED data is largely missing for Bronx, Brooklyn, Queens, and Staten Island
+        - **ELL and SPED data is largely missing** for Bronx, Brooklyn, Queens, and Staten Island
         - Manhattan has the most complete demographic coverage
 
     3.Special Education Concentration
 
-        - The highest SPED percentages are observed in Manhattan schools
-        - Other boroughs cannot be reliably compared due to missing data
+        - The **highest SPED percentages** are observed in **Manhattan** schools
+        - **Other boroughs** cannot be reliably compared due to **missing data**
 
     4.Data gaps identified in other boroughs
 
@@ -135,8 +135,8 @@ This environment contains all packages for **data extraction, filtering, merging
 
 - **Results:**
 
-    - 421 cleaned records successfully inserted or updated
-    - Table `alexandra_dernova_sat_scores` ready for analysis
+    - **421 cleaned records** successfully inserted or updated
+    - **Table `alexandra_dernova_sat_scores`** ready for analysis
 
 - **Files:** `population_database/sat_modeling.ipynb, data/sat-results.csv`
 
