@@ -31,7 +31,7 @@ df.head()
 Column names are now consistent (e.g., `school_name`, `grade_span_min`, `total_students`) and are easily usable for analysis and aggregation.
 
 ---
-## 3Selection of Relevant Columns and Data Quality
+## 3. Selection of Relevant Columns and Data Quality
 
 **Relevant columns for this analysis:**
 
