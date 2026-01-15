@@ -64,19 +64,19 @@ This environment contains all packages for **data extraction, filtering, merging
 ## Module Overview
 ### **1. NYC School Incident Analysis**
 
-- **Goal:** Analyze incident reports in NYC schools from Google Sheets
+- **Goal:** Analyze incident reports in NYC schools from [Google Sheets dataset](https://docs.google.com/spreadsheets/d/1CciDC8jgKkKn7CH-mQXwiT2Ha9YTYIKcsE8GGaj5q1E/edit?usp=sharing)
 - Analysis Objectives
 
-The analysis specifically aimed to answer the following questions:
+    The analysis specifically aimed to answer the following questions:
 
-  1. **How many total rows are there?**  
-   - This provides an overview of the dataset size before cleaning.
-  2. **How many unique schools are listed? (dbn)**  
-   - Identifies the number of distinct schools represented in the data.
-  3. **What is the most frequent incident type?**  
-   - Determines which type of incidents (major crimes, other crimes, non-criminal incidents, property crimes, or violent crimes) occur most often.
-  4. **What percentage of incidents occurred in the Bronx?**  
-   - Measures the borough-level distribution of incidents to highlight areas with higher safety concerns.
+    -- **How many total rows are there?**  
+            This provides an overview of the dataset size before cleaning.
+    -- **How many unique schools are listed? (dbn)**  
+            Identifies the number of distinct schools represented in the data.
+    -- **What is the most frequent incident type?**  
+            Determines which type of incidents (major crimes, other crimes, non-criminal incidents, property crimes, or violent crimes) occur most often.
+    -- **What percentage of incidents occurred in the Bronx?**  
+            Measures the borough-level distribution of incidents to highlight areas with higher safety concerns.
 
 - **Tasks:**
 
@@ -139,7 +139,7 @@ The analysis specifically aimed to answer the following questions:
 
 - **Results:**
 
-    1. School Distribution
+    1.School Distribution
 
         - Brooklyn has the highest number of high schools
         - Staten Island has very few, but typically larger schools
@@ -149,12 +149,12 @@ The analysis specifically aimed to answer the following questions:
         - ELL and SPED data is largely missing for Bronx, Brooklyn, Queens, and Staten Island
         - Manhattan has the most complete demographic coverage
 
-    3. Special Education Concentration
+    3.Special Education Concentration
 
         - The highest SPED percentages are observed in Manhattan schools
         - Other boroughs cannot be reliably compared due to missing data
 
-    4. Data gaps identified in other boroughs
+    4.Data gaps identified in other boroughs
 
 - **Files:** `database_exploration/sql_analysis.ipynb`, PostgreSQL queries
 
