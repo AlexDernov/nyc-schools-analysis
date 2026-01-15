@@ -105,18 +105,18 @@ This environment contains all packages for **data extraction, filtering, merging
 
     1.School Distribution
 
-        - **Brooklyn** has the **highest number of high schools**
-        - **Staten Island** has **very few, but typically larger schools**
+        - Brooklyn has the highest number of high schools
+        - Staten Island has very few, but typically larger schools
   
     2.Data Completeness Issues
 
-        - **ELL and SPED data is largely missing** for Bronx, Brooklyn, Queens, and Staten Island
+        - ELL and SPED data is largely missing for Bronx, Brooklyn, Queens, and Staten Island
         - Manhattan has the most complete demographic coverage
 
     3.Special Education Concentration
 
-        - The **highest SPED percentages** are observed in **Manhattan** schools
-        - **Other boroughs** cannot be reliably compared due to **missing data**
+        - The highest SPED percentages are observed in Manhattan schools
+        - Other boroughs cannot be reliably compared due to missing data
 
     4.Data gaps identified in other boroughs
 
