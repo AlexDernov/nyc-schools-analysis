@@ -1,22 +1,154 @@
+# NYC School Analysis
+
+This repository consolidates multiple analyses of **New York City schools**, including **school directories, incident reports, student demographics, and SAT results**. The project uses Python, Pandas, Matplotlib, and PostgreSQL to clean, aggregate, and visualize data.
+
+---
+
 ## Environment Setup
 
-Für dieses Projekt wird ein Conda-Environment verwendet, um alle benötigten Pakete in den richtigen Versionen bereitzustellen.
+This project uses a **Conda environment** to provide all required packages in fixed versions.
 
 ### Conda Environment
 
-Das Environment ist in `environment.yml` definiert.  
+The environment is defined in `environment.yml`.
 
-**Erstellen des Environments:**
+**Create the environment:**
 
 ```bash
 conda env create -f environment.yml
 ```
-**Aktivieren des Environments:**
+**Activate the environment:**
 
 ```bash
 conda activate ds
 ```
+**Note:**
+This environment contains all packages for **data extraction, filtering, merging, SQL interactions, and analysis**, including data visualization. Package versions are fixed to ensure reproducible results.
 
-**Hinweis:**
-Dieses Environment enthält alle Pakete für Datenextraktion, Filterung, Merging und Analysen, einschließlich SQL-Interaktionen und Datenvisualisierung.
-Die Versionen der Pakete sind fixiert, um reproduzierbare Ergebnisse sicherzustellen.
+## Module Overview
+### **1. NYC School Incident Analysis**
+
+- **Goal:** Analyze incident reports in NYC schools from [Google Sheets dataset](https://docs.google.com/spreadsheets/d/1CciDC8jgKkKn7CH-mQXwiT2Ha9YTYIKcsE8GGaj5q1E/edit?usp=sharing)
+- Analysis Objectives
+
+    The analysis specifically aimed to answer the following questions:
+
+    -- **How many total rows are there?**  
+            This provides an overview of the dataset size before cleaning.
+    -- **How many unique schools are listed? (dbn)**  
+            Identifies the number of distinct schools represented in the data.
+    -- **What is the most frequent incident type?**  
+            Determines which type of incidents (major crimes, other crimes, non-criminal incidents, property crimes, or violent crimes) occur most often.
+    -- **What percentage of incidents occurred in the Bronx?**  
+            Measures the borough-level distribution of incidents to highlight areas with higher safety concerns.
+
+- **Tasks:**
+
+    - Clean and normalize data
+    - Calculate aggregated metrics
+    - Identify and flag duplicate records
+    - Borough-level analysis (e.g., incidents in the Bronx)
+
+- **Results:**
+
+    - Dataset contains **6,309 rows** with **1,890 unique schools**
+    - Total incidents across all boroughs: **28,151**
+    - Total average incidents across all boroughs: **27,963.21**
+    - Most frequent incident type: **Non-criminal incidents (11,772 occurrences)**
+    - The Bronx accounts for **28.3% of total incidents**
+    - **Duplicate handling**: Full duplicates removed, partial duplicates flagged for review
+
+- **Files:** `nyc_school_incident_analysis/README.md`, Excel/CSV datasets
+
+### 2. High School Directory Analysis
+
+- **Goal:** Examine NYC high schools by count, student numbers, and grade levels
+
+- **Tasks:**
+
+    - Data cleaning and standardization of column names
+    - Select relevant variables
+    - Filter by boroughs and grade levels
+    - Aggregate and visualize school statistics
+
+- **Results:**
+
+    - Brooklyn: highest number of schools (121), followed by Bronx and Manhattan
+    - All Brooklyn schools accept 9th grade, showing broad coverage from the typical high school entry point.
+    - Average starting grades vary: - Brooklyn: 8.43 → some schools integrate middle school (grades 6–8) - Queens: 8.39 - Staten Island: 9.00 → pure high schools
+    - Student count per school varies significantly across boroughs: - Staten Island has few, but large schools - Brooklyn and Manhattan have many, moderately sized schools
+    - Grade structures are consistent, almost all schools reach grade 12.
+  
+- **Visualizations:**
+
+  - Number of Schools per Borough 
+    ![Bar chart showing the number of high schools per borough](nyc_school_directory/visualizations/bar_number_of_schools_per_borough.png)
+  - Average Students per School
+    ![Bar chart showing the average number of students per schools by borough](nyc_school_directory/visualizations/bar_average_number_of_students_per_school_by_borough.png)
+
+
+- **Files:** `nyc_school_directory/high_school_directory_analysis.ipynb`, visualizations in `visualizations/`
+
+### 3. NYC High School Demographics (SQL Analysis)
+
+- **Goal:** Analyze enrollment, English Language Learners (ELL), and Special Education (SPED) by school and borough
+
+- **Tasks:**
+
+    - SQL-based aggregation and filtering:
+  
+        - School distribution across boroughs
+        - English Language Learners (ELL)
+        - Special Education (SPED) student representation
+
+- **Results:**
+
+    1.School Distribution
+
+        - Brooklyn has the highest number of high schools
+        - Staten Island has very few, but typically larger schools
+  
+    2.Data Completeness Issues
+
+        - ELL and SPED data is largely missing for Bronx, Brooklyn, Queens, and Staten Island
+        - Manhattan has the most complete demographic coverage
+
+    3.Special Education Concentration
+
+        - The highest SPED percentages are observed in Manhattan schools
+        - Other boroughs cannot be reliably compared due to missing data
+
+    4.Data gaps identified in other boroughs
+
+- **Files:** `database_exploration/sql_analysis.ipynb`, PostgreSQL queries
+
+### 4. SAT Results Data Cleaning & PostgreSQL Integration
+
+- **Goal:** Clean, validate, and integrate NYC high school SAT results into PostgreSQL
+
+- **Tasks:**
+
+    - Standardize column names
+    - Handle missing or invalid values
+    - Convert data types for PostgreSQL compatibility
+    - Batch insertion with conflict handling
+
+- **Results:**
+
+    - 421 cleaned records successfully inserted or updated
+    - Table `alexandra_dernova_sat_scores` ready for analysis
+
+- **Files:** `population_database/sat_modeling.ipynb, data/sat-results.csv`
+
+## Next Steps
+
+- Further validate ELL and SPED data coverage
+- Extend analyses to additional metrics and time periods
+- Integrate visualizations and reports into a dashboard
+- Ensure reproducibility through dataset and environment versioning
+
+## License & Notes
+
+- This project is intended for learning and analytical purposes.
+- Data sources are public NYC education datasets or anonymized.
+- In production, database credentials and sensitive information should be securely stored (e.g., using `.env` files or a secrets manager).
