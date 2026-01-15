@@ -4,42 +4,6 @@ This repository consolidates multiple analyses of **New York City schools**, inc
 
 ---
 
-## Project Structure
-nyc-school-analysis/
-│
-├─ nyc_school_directory/
-│ ├─ data/
-│ │ └─ high-school-directory.csv
-│ ├─ visualizations/
-│ │ ├─ bar_number_of_schools_per_borough.png
-│ │ └─ bar_average_number_of_students_per_school_by_borough.png
-│ ├─ high_school_directory_analysis.ipynb
-│ └─ README.md
-│
-├─ database_exploration/
-│ ├─ README.md
-│ └─ sql_analysis.ipynb
-│
-├─ nyc_school_incident_analysis/
-│ ├─ data/
-│ │ ├─ high_school_directory_analysis.xlsx
-│ │ ├─ school_safety_report_data_dictionary.xlsx
-│ │ └─ school_safety_report_origin_data.csv
-│ └─ README.md
-│
-├─ population_database/
-│ ├─ data/
-│ │ ├─ sat-results.csv
-│ │ └─ sat-results-cleaned.csv
-│ ├─ sat_modeling.ipynb
-│ └─ README.md
-│
-├─ .gitignore
-├─ environment.yml
-└─ README.md
-
----
-
 ## Environment Setup
 
 This project uses a **Conda environment** to provide all required packages in fixed versions.
